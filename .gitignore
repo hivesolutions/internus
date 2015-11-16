@@ -1,0 +1,7 @@
+*.pyc
+
+session.shelve*
+
+/dist
+/build
+/src/internus.egg-info
