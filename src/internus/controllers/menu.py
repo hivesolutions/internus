@@ -19,6 +19,9 @@
 # You should have received a copy of the Apache License along with
 # Internus. If not, see <http://www.apache.org/licenses/>.
 
+__author__ = "João Magalhães <joamag@hive.pt>"
+""" The author(s) of the module """
+
 __version__ = "1.0.0"
 """ The version of the module """
 
@@ -34,10 +37,18 @@ __copyright__ = "Copyright (c) 2008-2015 Hive Solutions Lda."
 __license__ = "Apache License, Version 2.0"
 """ The license for the module """
 
-from . import api
-from . import base
-from . import menu
+import appier
 
-from .api import *
-from .base import BaseController
-from .menu import MenuController
+import internus
+
+class MenuController(appier.Controller):
+
+    @appier.route("/menu", "GET")
+    def show(self):
+        day = self.field("day", None, cast = int)
+        if day: kwargs = dict(day = day)
+        menu = internus.Menu.get(**kwargs)
+        return self.template(
+            "menu/show.html.tpl",
+            menu = menu
+        )
