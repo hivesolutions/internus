@@ -19,6 +19,9 @@
 # You should have received a copy of the Apache License along with
 # Internus. If not, see <http://www.apache.org/licenses/>.
 
+__author__ = "João Magalhães <joamag@hive.pt>"
+""" The author(s) of the module """
+
 __version__ = "1.0.0"
 """ The version of the module """
 
@@ -34,8 +37,31 @@ __copyright__ = "Copyright (c) 2008-2015 Hive Solutions Lda."
 __license__ = "Apache License, Version 2.0"
 """ The license for the module """
 
-from . import base
-from . import menu
+import appier
 
-from .base import InternusBase
-from .menu import Menu
+from . import base
+
+class Menu(base.InternusBase):
+
+    day = appier.field(
+        type = int,
+        index = True
+    )
+
+    items = appier.field(
+        type = list
+    )
+
+    @classmethod
+    def validate(cls):
+        return super(Menu, cls).validate() + [
+            appier.not_null("day"),
+            appier.not_empty("day"),
+
+            appier.not_null("items"),
+            appier.not_empty("items")
+        ]
+
+    @classmethod
+    def list_names(cls):
+        return ["id", "day"]
