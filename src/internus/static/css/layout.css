@@ -3,13 +3,28 @@
 .menu {
     font-family: Consolas, monospace;
     text-align: center;
+    margin: 0px auto 0px auto;
+    width: 640px;
 }
 
 .menu > h1 {
-    font-size: 32px;
+    font-size: 24px;
     margin: 24px 0px 8px 0px;
 }
 
-.menu > h1 {
-    font-size: 28px;
+.menu > h2 {
+    font-size: 22px;
+    margin: 8px 0px 32px 0px;
+}
+
+.menu > ul {
+    text-align: left;
+    list-style: none;
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
+}
+
+.menu > ul > li {
+    font-size: 14px;
+    line-height: 20px;
 }
