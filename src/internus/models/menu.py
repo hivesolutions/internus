@@ -45,7 +45,8 @@ class Menu(base.InternusBase):
 
     day = appier.field(
         type = int,
-        index = True
+        index = True,
+        meta = "datetime"
     )
 
     items = appier.field(
@@ -56,7 +57,7 @@ class Menu(base.InternusBase):
     def validate(cls):
         return super(Menu, cls).validate() + [
             appier.not_null("day"),
-            appier.not_empty("day"),
+            appier.gt("day", 0),
 
             appier.not_null("items"),
             appier.not_empty("items")
