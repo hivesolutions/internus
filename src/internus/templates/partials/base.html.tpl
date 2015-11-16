@@ -1,8 +1,8 @@
 {% set type = "business.business" %}
-{% set title = "Hive Solutions" %}
+{% set title = "Internus" %}
 {% set author = "Hive Solutions" %}
-{% set description = "Hive Solutions is a next-generation software boutique, built by perfectionists. We keep things simple, and care deeply about what we build, to the core." %}
-{% set keywords = "software development,ios development,full stack development,developers" %}
+{% set description = "Internus is the nexte-generation intranet." %}
+{% set keywords = "internus,intranet,menu" %}
 {% set street_address = "Rua 31 de Janeiro, 190A 3º Dto." %}
 {% set locality = "Porto" %}
 {% set postal_code = "4000-542" %}
