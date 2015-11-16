@@ -46,7 +46,7 @@ class MenuController(appier.Controller):
     @appier.route("/menu", "GET")
     def show(self):
         day = self.field("day", None, cast = int)
-        kwargs = dict(sort = (day, -1))
+        kwargs = dict(sort = [("day", -1)])
         if day: kwargs["day"] = day
         menu = internus.Menu.get(**kwargs)
         return self.template(
