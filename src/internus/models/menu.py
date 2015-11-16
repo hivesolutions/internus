@@ -46,10 +46,10 @@ class Menu(base.InternusBase):
     day = appier.field(
         type = int,
         index = True,
-        meta = "datetime"
+        meta = "date"
     )
 
-    items = appier.field(
+    dishes = appier.field(
         type = list
     )
 
@@ -59,8 +59,8 @@ class Menu(base.InternusBase):
             appier.not_null("day"),
             appier.gt("day", 0),
 
-            appier.not_null("items"),
-            appier.not_empty("items")
+            appier.not_null("dishes"),
+            appier.not_empty("dishes")
         ]
 
     @classmethod
