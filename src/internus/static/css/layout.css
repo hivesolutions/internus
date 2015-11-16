@@ -4,7 +4,7 @@
     font-family: Consolas, monospace;
     text-align: center;
     margin: 0px auto 0px auto;
-    width: 640px;
+    width: 400px;
 }
 
 .menu > h1 {
@@ -17,14 +17,22 @@
     margin: 8px 0px 32px 0px;
 }
 
-.menu > ul {
+.menu > dl {
     text-align: left;
     list-style: none;
     margin: 0px 0px 0px 0px;
     padding: 0px 0px 0px 0px;
+    font-size: 14px;
+    line-height: 22px;
 }
 
-.menu > ul > li {
-    font-size: 14px;
-    line-height: 20px;
+.menu > dl > dd {
+	text-align: right;
+}
+
+.menu > dl > dt,
+.menu > dl > dd {
+    width: 50%;
+    margin: 0px 0px 0px 0px;
+    display: inline-block;
 }

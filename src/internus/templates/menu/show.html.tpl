@@ -2,11 +2,11 @@
 {% block content %}
     <div class="menu">
         <h1>Menu</h1>
-        <h2>14 de Novembro de 2005</h2>
-        <ul>
+        <h2>{{ menu.day_d.strftime('%B %d, %Y') }}</h2>
+		<dl>
             {% for dish in menu.dishes %}
-                <li>{{ dish }}</li>
+            	<dt>{{ dish }}</dt><dd>-</dd>
             {% endfor %}
-        </ul>
+        </dl>
     </div>
 {% endblock %}

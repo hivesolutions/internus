@@ -37,6 +37,8 @@ __copyright__ = "Copyright (c) 2008-2015 Hive Solutions Lda."
 __license__ = "Apache License, Version 2.0"
 """ The license for the module """
 
+import datetime
+
 import appier
 
 from . import base
@@ -66,3 +68,7 @@ class Menu(base.InternusBase):
     @classmethod
     def list_names(cls):
         return ["id", "day"]
+
+    @property
+    def day_d(self):
+        return datetime.datetime.fromtimestamp(self.day)
