@@ -55,3 +55,5 @@ class InternusApp(appier.WebApp):
 if __name__ == "__main__":
     app = InternusApp()
     app.serve()
+else:
+    __path__ = []
