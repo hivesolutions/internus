@@ -14,7 +14,10 @@ body {
     background-color: #ffffff;
     border: 1px solid #cccccc;
     box-shadow: 0px 1px 4px #dddddd;
+    -o-box-shadow: 0px 1px 4px #dddddd;
+    -ms-box-shadow: 0px 1px 4px #dddddd;
     -moz-box-shadow: 0px 1px 4px #dddddd;
+    -khtml-box-shadow: 0px 1px 4px #dddddd;
     -webkit-box-shadow: 0px 1px 4px #dddddd;
     font-family: Consolas, monospace;
     height: 100%;
